@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using PemrClearingHouse.Api.Entities;
 using PemrClearingHouse.Api.Services;
 
@@ -6,6 +7,7 @@ namespace PemrClearingHouse.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class OrganizationsController : ControllerBase
     {
         private readonly OrganizationService _service;
@@ -26,14 +28,14 @@ namespace PemrClearingHouse.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(OrganizationEntity org)
+        public async Task<IActionResult> Post(Organization org)
         {
             await _service.CreateAsync(org);
             return CreatedAtAction(nameof(Get), new { id = org.Id }, org);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(string id, OrganizationEntity org)
+        public async Task<IActionResult> Put(string id, Organization org)
         {
             var updated = await _service.UpdateAsync(id, org);
             return updated ? NoContent() : NotFound();

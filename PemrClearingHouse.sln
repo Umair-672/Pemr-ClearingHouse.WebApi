@@ -5,6 +5,8 @@ VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PemrClearingHouse.Api", "PemrClearingHouse.Api.csproj", "{250BE984-A554-425D-A20D-A212C406EE7E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PemrClearingHouse.Api.Tests", "..\PemrClearingHouse.Api.Tests\PemrClearingHouse.Api.Tests.csproj", "{F6E454C0-2E8B-413F-ACFE-06019FF06CB1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +17,15 @@ Global
 		{250BE984-A554-425D-A20D-A212C406EE7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{250BE984-A554-425D-A20D-A212C406EE7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{250BE984-A554-425D-A20D-A212C406EE7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6E454C0-2E8B-413F-ACFE-06019FF06CB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6E454C0-2E8B-413F-ACFE-06019FF06CB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6E454C0-2E8B-413F-ACFE-06019FF06CB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6E454C0-2E8B-413F-ACFE-06019FF06CB1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E6046C1F-3BC5-46FF-B2B6-8E2E5FDF2796}
 	EndGlobalSection
 EndGlobal
